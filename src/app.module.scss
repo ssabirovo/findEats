@@ -1,0 +1,25 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .board {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color: var(--white);
+    border-collapse: collapse;
+  }
+  .title {
+  }
+}

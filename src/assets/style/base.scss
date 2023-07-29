@@ -1,0 +1,10 @@
+@import "./themes";
+
+:root {
+  @include theme-light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
