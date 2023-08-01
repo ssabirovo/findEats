@@ -8,7 +8,7 @@ const Bishop: React.FC = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_41_83)">
+    <g clipPath="url(#clip0_41_83)">
       <path
         d="M49.226 57.0057H23.4709C22.6055 57.0057 22.0594 57.6009 22.4848 58.0816L24.9751 60.0007H47.7188L50.2106 58.0816C50.636 57.6 50.0914 57.0057 49.226 57.0057Z"
         fill="#67FD8F"
@@ -80,7 +80,6 @@ const Bishop: React.FC = () => (
       </clipPath>
     </defs>
   </svg>
-  
 );
 
 export default Bishop;

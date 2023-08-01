@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Cell, { CellComponentProps } from "./components/cell/cell";
 import ChessBoard, { CellProps } from "./inside";
 import * as List from "./assets/icons/list";
+import "animate.css";
+import cx from "classnames";
 import cls from "./app.module.scss";
 
 export type functionType = (
@@ -16,8 +18,16 @@ function App() {
 
   useEffect(() => {
     setEats(numRookCaptures(board));
-  });
+  }, [board]);
 
+  const handleClearAll = () => {
+    const newBoard: CellProps[][] = board.map((row) =>
+      row.map((cell) => Object.assign({}, cell))
+    );
+
+    newBoard.forEach((row) => row.forEach((cell) => (cell.figure = "")));
+    setBoard(newBoard);
+  };
   const numRookCaptures: (boardd: CellProps[][]) => number = (boardd) => {
     const findRook: (board: CellProps[][]) => { x: number; y: number } = (
       board
@@ -138,8 +148,26 @@ function App() {
 
   return (
     <>
+      <div className={cls.navbar}>
+        <a
+          className={cls.github}
+          target="_blank"
+          href="https://github.com/ssabirovo/findEats"
+        >
+          <i className="fa-3x fa-brands fa-github"></i>
+        </a>
+      </div>
       <div className={cls.wrapper}>
-        <div className={cls.board}>
+        <div
+          className={cx(cls.captures, "animate__animated  animate__fadeInLeft")}
+        >
+          <h1>
+            Captures <br /> <p>{eats}</p>
+          </h1>
+        </div>
+        <div
+          className={cx(cls.board, "animate__animated  animate__fadeInDown")}
+        >
           {board.map((row, xIndex) =>
             row.map(({ isSelected, figure, isBlack }, yIndex) => (
               <Cell
@@ -156,7 +184,17 @@ function App() {
             ))
           )}
         </div>
-        <h1>{eats}</h1>
+        <div className={cx(cls.btn, "animate__animated  animate__fadeInRight")}>
+          <button onClick={() => handleClearAll()}>Clear all</button>
+        </div>
+      </div>
+      <div className={cls.info}>
+        <p className={cls.title}>
+          Available Captures for <p>Rook</p>
+        </p>
+        <p className={cx(cls.link, "animate__animated  animate__fadeInLeft")}>
+          This site is inspired by the Leetcode problem. <strong>s</strong>
+        </p>
       </div>
     </>
   );

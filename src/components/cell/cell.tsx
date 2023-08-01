@@ -28,7 +28,13 @@ const Cell: React.FC<CellComponentProps> = ({
 }) => {
   const [selected, setSelected] = useState<boolean>(true);
   return (
-    <div className={cx(cls.cell, isBlack && cls.cellWhite)}>
+    <div
+      className={cx(
+        cls.cell,
+        isBlack && cls.cellWhite,
+        isSelected && cls.cellOpen
+      )}
+    >
       <div className={cx(cls.nav, isSelected && cls.navOpen)}>
         {figures.map((figure, index) => (
           <div

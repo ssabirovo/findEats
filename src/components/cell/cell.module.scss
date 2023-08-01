@@ -30,11 +30,11 @@
     transition: 0.1s linear;
     transform: scale(0);
     right: -70px;
-    z-index: 1;
-    overflow: hidden;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     span {
       height: 100%;
@@ -44,19 +44,27 @@
     svg {
       padding: 5px;
       width: 40px;
+      border-radius: 5px;
+
       &:hover {
         background-color: var(--cell-hover);
+        z-index: 3;
       }
     }
   }
   .navOpen {
     transform: scale(1);
   }
+  
 
   &:hover {
-    background-color: var(--cell-hover);
+    z-index: 1;
+    transform: translate(6px, -4px);
+    box-shadow: -2px 4px 0px 1px #000;
+    border: 1px solid var(--black);
   }
 }
+
 .cellWhite {
   background-color: var(--primary);
   border: 1px solid var(--black);
