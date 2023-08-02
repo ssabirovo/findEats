@@ -192,8 +192,29 @@ function App() {
         <p className={cls.title}>
           Available Captures for <p>Rook</p>
         </p>
+        <a
+          target="_blank"
+          href="https://leetcode.com/problems/available-captures-for-rook/"
+          className={cx(cls.link, "animate__animated  animate__fadeInLeft")}
+        >
+          This site is inspired by the Leetcode problem
+          <i className="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
         <p className={cx(cls.link, "animate__animated  animate__fadeInLeft")}>
-          This site is inspired by the Leetcode problem. <strong>s</strong>
+          After solving the problem, I liked it. That's why I decided to create
+          a cool UI for the site based on this problem.
+        </p>
+        <a
+          target="_blank"
+          href="https://www.figma.com/file/pafnC9FgO08tWzOFyzRMW2/Untitled?type=design&node-id=1%3A2&mode=design&t=LF16GOFOTAxt2MRS-1"
+          className={cx(cls.link, "animate__animated  animate__fadeInLeft")}
+        >
+          Check out the Figma layout of the site.
+          <i className="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <p className={cls.footer}>
+          The technologies used in the creation of this site are: React,
+          TypeScript and Sass.
         </p>
       </div>
     </>
