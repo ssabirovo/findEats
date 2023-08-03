@@ -3,7 +3,6 @@ import * as List from "../../assets/icons/list";
 import cx from "classnames";
 import cls from "./cell.module.scss";
 import figures from "./inside";
-import { useState } from "react";
 
 export interface CellComponentProps {
   isBlack: boolean;
@@ -26,7 +25,6 @@ const Cell: React.FC<CellComponentProps> = ({
   yIndex,
   deleteFigure,
 }) => {
-  const [selected, setSelected] = useState<boolean>(true);
   return (
     <div
       className={cx(

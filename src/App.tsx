@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Cell, { CellComponentProps } from "./components/cell/cell";
+import Cell from "./components/cell/cell";
 import ChessBoard, { CellProps } from "./inside";
 import * as List from "./assets/icons/list";
 import "animate.css";
