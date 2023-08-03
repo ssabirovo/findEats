@@ -189,9 +189,11 @@ function App() {
         </div>
       </div>
       <div className={cls.info}>
-        <p className={cls.title}>
-          Available Captures for <p>Rook</p>
-        </p>
+        <div className={cls.title}>
+          <p>Available Captures for</p>
+          <p className={cls.rook}>Rook</p>
+        </div>
+
         <a
           target="_blank"
           href="https://leetcode.com/problems/available-captures-for-rook/"
