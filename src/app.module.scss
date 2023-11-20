@@ -160,8 +160,12 @@
     align-items: baseline;
     color: var(--black);
     text-decoration: none;
+
     i {
       transition: 0.1s linear;
+    }
+    @media (max-width: 430px) {
+      font-size: 20px;
     }
   }
   .link:hover {

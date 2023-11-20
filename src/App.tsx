@@ -214,7 +214,7 @@ function App() {
           Check out the Figma layout of the site.
           <i className="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
-        <p className={cls.footer}>
+        <p className={cx(cls.link, cls.footer)}>
           The technologies used in the creation of this site are: React,
           TypeScript and Sass.
         </p>
